@@ -3,128 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FocusCut - Privacy Policy / Gizlilik Politikası</title>
+    <title>FocusCut Privacy Policy / Gizlilik Politikası</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 24px; color: #222; }
-        h1 { font-size: 24px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
-        h2 { font-size: 18px; margin-top: 24px; color: #111; }
-        p { margin: 8px 0; }
-        .date { font-size: 14px; color: #666; margin-bottom: 16px; }
-        .summary { background: #f4f4f5; padding: 16px; border-radius: 8px; margin-bottom: 24px; }
-        .divider { margin: 40px 0; border-top: 2px dashed #ccc; }
-        a { color: #0066cc; text-decoration: underline; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .lang-switcher {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+        }
+        .lang-btn {
+            background: none;
+            border: 1px solid #3498db;
+            color: #3498db;
+            padding: 5px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background: #3498db;
+            color: #fff;
+        }
+        .lang-btn:hover {
+            background: #2980b9;
+            color: #fff;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+            padding-right: 120px; /* Dil butonları için boşluk */
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .summary {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 0 4px 4px 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 600px) {
+            .lang-switcher {
+                position: static;
+                margin-bottom: 20px;
+            }
+            h1 {
+                padding-right: 0;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ENGLISH SECTION -->
-    <h1>FocusCut Privacy Policy</h1>
-    <div class="date">Last Updated: August 16, 2026</div>
-    <div class="summary">
-        <strong>Summary:</strong> FocusCut is designed to edit your selected photos on your device. Your photos and edits are never uploaded to the developer's servers. The app uses Google Mobile Ads SDK for optional rewarded ads and Google User Messaging Platform (UMP) for ad privacy choices.
+<div class="container">
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('tr')">TR</button>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
     </div>
 
-    <h2>1. Responsible Entity & Scope</h2>
-    <p>This policy explains how the FocusCut Android app handles photos, drafts, device data, and ad-related information.</p>
-    <p><strong>Data Controller / Legal Name:</strong> Muhammet Melih Çalış</p>
-    <p><strong>Google Play Developer Account:</strong> Tomume Studio</p>
-    <p>For privacy inquiries: <strong>muhammetappsupport@gmail.com</strong></p>
+    <!-- TÜRKÇE İÇERİK -->
+    <div id="content-tr" class="lang-content active">
+        <h1>FocusCut Gizlilik Politikası</h1>
+        <div class="date">Son güncelleme: 27 Ağustos 2026</div>
 
-    <h2>2. Photos & Edits</h2>
-    <p>The Android system photo picker is used when adding photos. The app only accesses images you explicitly select; it does not request full gallery access. Background removal, object detection, blur, color adjustments, cropping, collage, and other edits are processed locally on your device.</p>
-    <p>Selected photos and project edits may be saved as drafts in the app's private local storage on your device. These files are never sent to the developer. Deleting a project, clearing app data, or uninstalling the app deletes these local drafts.</p>
-    <p>Exported images are saved to your device's Pictures/FocusCut folder. You have full control over these files and can delete them via your gallery or file manager.</p>
+        <div class="summary">
+            <strong>Kısa özet:</strong> FocusCut, seçtiğiniz fotoğrafları cihazınızda düzenlemek için tasarlanmıştır. Fotoğraflarınız ve düzenlemeleriniz FocusCut geliştiricisinin sunucusuna yüklenmez. Uygulama ana ekranda banner ve isteğe bağlı ödüllü reklamlar için Google Mobile Ads SDK, reklam gizliliği tercihleri için Google User Messaging Platform (UMP) kullanır.
+        </div>
 
-    <h2>3. Types of Data Processed</h2>
-    <p><strong>Photos & Edits:</strong> Processed locally on the device; never uploaded to developer servers.</p>
-    <p><strong>Local Drafts:</strong> Stored in the app's local private storage to let you resume work.</p>
-    <p><strong>Ad & Interaction Data:</strong> Google Mobile Ads SDK may process data for ad serving, measurement, and fraud prevention. Depending on your region and consent, this may include IP address, approximate location, app interactions, diagnostics, device info, and advertising ID.</p>
-    <p><strong>Account Data:</strong> FocusCut does not require account creation, login, or access to your contacts.</p>
+        <h2>1. Sorumlu kuruluş ve kapsam</h2>
+        <p>Bu politika, FocusCut Android uygulamasının fotoğrafları, taslakları, cihaz bilgilerini ve reklamla ilgili verileri nasıl işlediğini açıklar. Google Play geliştirici adı: <strong>Tomume Studio</strong>. Verilerden sorumlu kişi: Muhammet Melih Çalış.</p>
+        <p>Gizlilik soruları ve talepleri için: <a href="mailto:muhammetappsupport@gmail.com">muhammetappsupport@gmail.com</a>.</p>
 
-    <h2>4. Ads & Google Services</h2>
-    <p>FocusCut uses rewarded ads to optionally unlock high-resolution export options (such as Full HD, 2K, and original resolution). Watching ads is optional; standard quality export is available without ads.</p>
-    <p>Google Mobile Ads SDK processes device data in accordance with Google's privacy policies. FocusCut never sends photo content to Google for ad personalization. For more details on Google's privacy practices, please visit the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-    <p>In applicable regions, ad consent is managed via Google UMP. You can modify these settings anytime in Settings &gt; Ad Privacy Options.</p>
+        <h2>2. Fotoğraflar ve düzenlemeler</h2>
+        <p>Fotoğraf eklerken Android sistem fotoğraf seçicisi kullanılır. Uygulama yalnızca sizin seçtiğiniz fotoğraflara erişir; galerinin tamamını taramak için sürekli bir fotoğraf erişimi istemez. Arka plan kaldırma, obje algılama, bulanıklaştırma, renk ayarı, kırpma, kolaj ve benzeri düzenlemeler cihazınızda çalışır.</p>
+        <p>Seçtiğiniz fotoğraflar ve düzenleme bilgileri, çalışmaya devam edebilmeniz için uygulamanın özel yerel alanında taslak olarak saklanabilir. Bu dosyalar FocusCut geliştiricisine gönderilmez. Uygulama içindeki proje silme, Android uygulama verilerini temizleme veya uygulamayı kaldırma işlemleri özel alandaki taslakları siler.</p>
+        <p>Dışa aktardığınız görseller, seçtiğiniz biçime göre cihazınızdaki <em>Pictures/FocusCut</em> klasörüne kaydedilir. Bu dosyalar üzerinde kontrol sizdedir ve onları galeri veya dosya uygulamanızdan silebilirsiniz.</p>
 
-    <h2>5. Permissions</h2>
-    <p><strong>Internet & Network:</strong> Required for UMP and Google Ads services.</p>
-    <p><strong>Photo Selection:</strong> Via Android system picker only for selected images.</p>
-    <p><strong>Storage Write (Legacy Android):</strong> Used only on Android 9 and below to save exported images to the Pictures folder. This permission is not used to batch-read photos.</p>
-    <p>FocusCut does not request access to camera, microphone, precise location, contacts, SMS, call logs, or user accounts.</p>
+        <h2>3. Toplanan veya işlenen veri türleri</h2>
+        <ul>
+            <li><strong>Fotoğraflar ve düzenlemeler:</strong> Uygulamanın temel işlevi için cihazda işlenir; geliştiricinin sunucusuna yüklenmez.</li>
+            <li><strong>Yerel taslaklar:</strong> Son çalışmaya devam etmek için cihazın uygulamaya özel alanında tutulabilir.</li>
+            <li><strong>Reklam ve uygulama etkileşim verileri:</strong> Google Mobile Ads SDK tarafından reklam sunumu, ölçüm, sahtekârlığı önleme ve benzeri amaçlarla işlenebilir. Bölgeye ve onay tercihlerinize bağlı olarak IP adresi, yaklaşık konum çıkarımı, uygulama etkileşimleri, tanılama bilgileri, cihaz bilgileri ve reklam kimliği gibi veriler söz konusu olabilir.</li>
+            <li><strong>Hesap bilgileri:</strong> FocusCut hesap açmayı, oturum açmayı veya kişi listenizi kullanmayı gerektirmez.</li>
+        </ul>
 
-    <h2>6. Sharing & Third Parties</h2>
-    <p>FocusCut does not sell, rent, or store your photos. Google Mobile Ads SDK and UMP may transmit data to their services subject to your consent choices and Google policies. Opening links in a browser or sharing exported files with other apps are user-initiated actions subject to respective third-party policies.</p>
+        <h2>4. Reklamlar ve Google hizmetleri</h2>
+        <p>FocusCut ana ekranda banner reklam gösterebilir. Ayrıca Full HD ve orijinal çözünürlük gibi yüksek dışa aktarma seçeneklerini isteğe bağlı olarak açmak için ödüllü reklam kullanır. Reklam izlemek zorunlu değildir; standart kalite seçeneği reklamsız kullanılabilir.</p>
+        <p>Google Mobile Ads SDK, reklam hizmetlerini sağlamak ve ölçmek için cihazdan veri işleyebilir. Bu işleme, Google’ın kendi politikalarına ve hesabınızdaki reklam ayarlarına tabidir. FocusCut fotoğraf içeriğini reklam kişiselleştirmesi için Google’a göndermez.</p>
+        <p>Geçerli bölgelerde reklam onayı ve reklam gizliliği tercihleri Google UMP ekranıyla alınır. Bu tercihleri uygulamadaki <em>Ayarlar &gt; Reklam gizliliği seçenekleri</em> bölümünden değiştirebilirsiniz. Ayrıntılar: Google Play veri açıklaması, Google Gizlilik Politikası.</p>
 
-    <h2>7. Retention, Deletion & User Rights</h2>
-    <p>Because the developer does not store your photos on servers, they cannot be deleted remotely. You can delete local drafts within the app or by clearing app storage. Exported photos can be deleted from your gallery or file manager. Users have the right to request information, modification, or deletion regarding any data processed under applicable data protection regulations by contacting us via email.</p>
+        <h2>5. İzinler</h2>
+        <ul>
+            <li><strong>İnternet ve ağ durumu:</strong> UMP ve Google reklam hizmetlerinin çalışması için.</li>
+            <li><strong>Fotoğraf seçimi:</strong> Android sistem seçicisi üzerinden yalnızca seçtiğiniz görseller için.</li>
+            <li><strong>Eski Android sürümlerinde depolamaya yazma:</strong> Android 9 ve altındaki cihazlarda dışa aktarılan görseli ortak <em>Pictures</em> klasörüne kaydetmek için. Bu izin fotoğrafları toplu okumak amacıyla kullanılmaz.</li>
+        </ul>
+        <p>FocusCut kamera, mikrofon, konum, kişiler, SMS, arama kayıtları veya hesap erişimi istemez.</p>
 
-    <h2>8. Children's Privacy</h2>
-    <p>FocusCut does not knowingly collect personal information from children under 13 and is not directed specifically at children.</p>
+        <h2>6. Paylaşım ve üçüncü taraflar</h2>
+        <p>FocusCut geliştiricisi fotoğraflarınızı satmaz, kiralamaz veya kendi sunucularında depolamaz. Google Mobile Ads SDK ve UMP, reklam ve onay hizmetlerini sağlamak için kendi hizmetlerine veri aktarabilir. Bu aktarım, reklam gizliliği tercihleriniz ve ilgili Google hizmetlerinin koşulları kapsamında gerçekleşir.</p>
+        <p>Bir gizlilik politikası bağlantısını tarayıcıda açmanız veya dışa aktardığınız dosyayı başka bir uygulamayla paylaşmanız sizin başlattığınız işlemlerdir ve hedef uygulamanın kendi politikalarına tabidir.</p>
 
-    <h2>9. Security</h2>
-    <p>Processing photos locally on-device ensures your images remain private. Network communications with Google services are encrypted according to provider standards.</p>
+        <h2>7. Saklama ve silme</h2>
+        <p>FocusCut geliştiricisi fotoğraf ve taslaklarınıza sahip olmadığı için bunları sizin adınıza sunucudan silemez. Yerel taslakları uygulama içindeki proje silme seçeneğiyle veya Android ayarlarından uygulama verilerini temizleyerek silebilirsiniz. Dışa aktarılan görselleri galeri/dosya uygulamanızdan ayrıca silmeniz gerekir. Google reklam hizmetlerinin saklama süreleri Google’ın politikalarına göre belirlenir.</p>
 
-    <h2>10. Policy Changes</h2>
-    <p>This policy may be updated as app features or regulations change. The latest version will always be available on this page.</p>
+        <h2>8. Çocukların gizliliği</h2>
+        <p>FocusCut bilinçli olarak çocuklardan kişisel bilgi istemez ve çocuklara özel bir hizmet olarak tasarlanmamıştır. Google Play Console’daki hedef kitle seçimi uygulamanın gerçek kullanımına göre yapılmalıdır. Uygulama çocukları hedefleyecek şekilde değişirse Families politikası ve reklam ayarları yeniden değerlendirilmelidir.</p>
 
-    <h2>11. Contact</h2>
-    <p>For questions regarding this policy or personal data, contact: <strong>muhammetappsupport@gmail.com</strong></p>
+        <h2>9. Güvenlik</h2>
+        <p>Fotoğraf düzenleme işlemlerinin cihazda yapılması, fotoğraf içeriğinin geliştiriciye aktarılmamasını sağlar. Google hizmetleriyle yapılan ağ iletişimi ilgili sağlayıcının güvenlik ve şifreleme uygulamalarına tabidir. Hiçbir elektronik depolama veya aktarım yönteminin tamamen risksiz olduğu garanti edilemez.</p>
 
-    <div class="divider"></div>
+        <h2>10. Politika değişiklikleri</h2>
+        <p>Uygulama özellikleri, kullanılan SDK’lar veya yasal gereklilikler değiştiğinde bu politika güncellenebilir. Güncel sürüm bu sayfada, güncelleme tarihiyle birlikte yayınlanır.</p>
 
-    <!-- TÜRKÇE BÖLÜM -->
-    <h1>FocusCut Gizlilik Politikası</h1>
-    <div class="date">Son Güncelleme: 16 Ağustos 2026</div>
-    <div class="summary">
-        <strong>Kısa Özet:</strong> FocusCut, seçtiğiniz fotoğrafları cihazınızda düzenlemek için tasarlanmıştır. Fotoğraflarınız ve düzenlemeleriniz FocusCut geliştiricisinin sunucusuna yüklenmez. Uygulama isteğe bağlı ödüllü reklamlar için Google Mobile Ads SDK ve reklam gizliliği tercihleri için Google User Messaging Platform (UMP) kullanır.
+        <h2>11. İletişim</h2>
+        <p>Bu politika veya kişisel verilerle ilgili sorularınız için <a href="mailto:muhammetappsupport@gmail.com">muhammetappsupport@gmail.com</a> adresine yazabilirsiniz.</p>
     </div>
 
-    <h2>1. Sorumlu Kuruluş ve Kapsam</h2>
-    <p>Bu politika, FocusCut Android uygulamasının fotoğrafları, taslakları, cihaz bilgilerini ve reklamla ilgili verileri nasıl işlediğini açıklar.</p>
-    <p><strong>Veri Sorumlusu / Yasal Adı:</strong> Muhammet Melih Çalış</p>
-    <p><strong>Google Play Geliştirici Adı:</strong> Tomume Studio</p>
-    <p>Gizlilik soruları ve talepleri için: <strong>muhammetappsupport@gmail.com</strong></p>
+    <!-- ENGLISH CONTENT -->
+    <div id="content-en" class="lang-content">
+        <h1>FocusCut Privacy Policy</h1>
+        <div class="date">Last updated: August 27, 2026</div>
 
-    <h2>2. Fotoğraflar ve Düzenlemeler</h2>
-    <p>Fotoğraf eklerken Android sistem fotoğraf seçicisi kullanılır. Uygulama yalnızca sizin seçtiğiniz fotoğraflara erişir; galerinin tamamını taramak için sürekli bir fotoğraf erişimi istemez. Arka plan kaldırma, obje algılama, bulanıklaştırma, renk ayarı, kırpma, kolaj ve benzeri düzenlemeler cihazınızda çalışır.</p>
-    <p>Seçtiğiniz fotoğraflar ve düzenleme bilgileri, çalışmaya devam edebilmeniz için uygulamanın özel yerel alanında taslak olarak saklanabilir. Bu dosyalar FocusCut geliştiricisine gönderilmez. Uygulama içindeki proje silme, Android uygulama verilerini temizleme veya uygulamayı kaldırma işlemleri özel alandaki taslakları siler.</p>
-    <p>Dışa aktardığınız görseller, seçtiğiniz biçime göre cihazınızdaki Pictures/FocusCut klasörüne kaydedilir. Bu dosyalar üzerinde kontrol sizdedir ve onları galeri veya dosya uygulamanızdan silebilirsiniz.</p>
+        <div class="summary">
+            <strong>Quick summary:</strong> FocusCut is designed to edit your selected photos entirely on your device. Your photos and edits are not uploaded to the FocusCut developer's servers. The app uses the Google Mobile Ads SDK for banner ads and optional rewarded ads, and the Google User Messaging Platform (UMP) for ad privacy preferences.
+        </div>
 
-    <h2>3. Toplanan veya İşlenen Veri Türleri</h2>
-    <p><strong>Fotoğraflar ve düzenlemeler:</strong> Uygulamanın temel işlevi için cihazda işlenir; geliştiricinin sunucusuna yüklenmez.</p>
-    <p><strong>Yerel taslaklar:</strong> Son çalışmaya devam etmek için cihazın uygulamaya özel alanında tutulabilir.</p>
-    <p><strong>Reklam ve uygulama etkileşim verileri:</strong> Google Mobile Ads SDK tarafından reklam sunumu, ölçüm, sahtekârlığı önleme ve benzeri amaçlarla işlenebilir. Bölgeye ve onay tercihlerinize bağlı olarak IP adresi, yaklaşık konum çıkarımı, uygulama etkileşimleri, tanılama bilgileri, cihaz bilgileri ve reklam kimliği gibi veriler söz konusu olabilir.</p>
-    <p><strong>Hesap bilgileri:</strong> FocusCut hesap açmayı, oturum açmayı veya kişi listenizi kullanmayı gerektirmez.</p>
+        <h2>1. Responsible entity and scope</h2>
+        <p>This policy explains how the FocusCut Android application handles photos, drafts, device information, and ad-related data. Google Play developer name: <strong>Tomume Studio</strong>. Data controller: Muhammet Melih Çalış.</p>
+        <p>For privacy questions and requests: <a href="mailto:muhammetappsupport@gmail.com">muhammetappsupport@gmail.com</a>.</p>
 
-    <h2>4. Reklamlar ve Google Hizmetleri</h2>
-    <p>FocusCut, Full HD, 2K ve orijinal çözünürlük gibi yüksek dışa aktarma seçeneklerini isteğe bağlı olarak açmak için ödüllü reklam kullanır. Reklam izlemek zorunlu değildir; standart kalite seçeneği reklamsız kullanılabilir.</p>
-    <p>Google Mobile Ads SDK, reklam hizmetlerini sağlamak ve ölçmek için cihazdan veri işleyebilir. Bu işleme, Google’ın kendi politikalarına ve hesabınızdaki reklam ayarlarına tabidir. Ayrıntılı bilgi için <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a> sayfasını inceleyebilirsiniz. FocusCut fotoğraf içeriğini reklam kişiselleştirmesi için Google’a göndermez.</p>
-    <p>Geçerli bölgelerde reklam onayı ve reklam gizliliği tercihleri Google UMP ekranıyla alınır. Bu tercihleri uygulamadaki Ayarlar &gt; Reklam gizliliği seçenekleri bölümünden değiştirebilirsiniz.</p>
+        <h2>2. Photos and edits</h2>
+        <p>The Android system photo picker is used when importing photos. The app only accesses the photos you select; it does not request continuous storage access to scan your entire gallery. Background removal, object detection, blur, color adjustment, cropping, collage, and similar edits are processed locally on your device.</p>
+        <p>The photos you select and your editing progress may be saved as drafts in the app's private local storage so you can continue your work later. These files are never sent to the FocusCut developer. Deleting a project within the app, clearing the Android app data, or uninstalling the application will permanently delete these drafts from the private storage.</p>
+        <p>Exported images are saved to the <em>Pictures/FocusCut</em> folder on your device according to your chosen format. You have full control over these files and can delete them directly from your gallery or file manager app.</p>
 
-    <h2>5. İzinler</h2>
-    <p><strong>İnternet ve ağ durumu:</strong> UMP ve Google reklam hizmetlerinin çalışması için.</p>
-    <p><strong>Fotoğraf seçimi:</strong> Android sistem seçicisi üzerinden yalnızca seçtiğiniz görseller için.</p>
-    <p><strong>Eski Android sürümlerinde depolamaya yazma:</strong> Android 9 ve altındaki cihazlarda dışa aktarılan görseli ortak Pictures klasörüne kaydetmek için. Bu izin fotoğrafları toplu okumak amacıyla kullanılmaz.</p>
-    <p>FocusCut kamera, mikrofon, konum, kişiler, SMS, arama kayıtları veya hesap erişimi istemez.</p>
+        <h2>3. Types of data collected or processed</h2>
+        <ul>
+            <li><strong>Photos and edits:</strong> Processed on the device for the core functionality of the app; never uploaded to the developer's server.</li>
+            <li><strong>Local drafts:</strong> Temporarily kept in the app-specific space on the device to allow you to resume your recent edits.</li>
+            <li><strong>Ad and app interaction data:</strong> Processed by the Google Mobile Ads SDK for ad delivery, measurement, fraud prevention, and similar purposes. Depending on your region and consent preferences, data such as IP address, approximate location inference, app interactions, diagnostic information, device information, and advertising ID may be processed.</li>
+            <li><strong>Account information:</strong> FocusCut does not require you to create an account, log in, or provide access to your contact list.</li>
+        </ul>
 
-    <h2>6. Paylaşım ve Üçüncü Taraflar</h2>
-    <p>FocusCut geliştiricisi fotoğraflarınızı satmaz, kiralamaz veya kendi sunucularında depolamaz. Google Mobile Ads SDK ve UMP, reklam ve onay hizmetlerini sağlamak için kendi hizmetlerine veri aktarabilir. Bu aktarım, reklam gizliliği tercihleriniz ve ilgili Google hizmetlerinin koşulları kapsamında gerçekleşir.</p>
-    <p>Bir gizlilik politikası bağlantısını tarayıcıda açmanız veya dışa aktardığınız dosyayı başka bir uygulamayla paylaşmanız sizin başlattığınız işlemlerdir ve hedef uygulamanın kendi politikalarına tabidir.</p>
+        <h2>4. Ads and Google services</h2>
+        <p>FocusCut may display banner ads on the home screen. It also utilizes rewarded ads to optionally unlock high-quality export options, such as Full HD and original resolution. Watching ads is not mandatory; standard quality exports are always available ad-free.</p>
+        <p>The Google Mobile Ads SDK may process data from your device to provide and measure ad services. This processing is subject to Google's own policies and your Google account ad settings. FocusCut does not send your photo content to Google for ad personalization.</p>
+        <p>In applicable regions, ad consent and privacy preferences are managed via the Google UMP screen. You can change these preferences anytime within the app via <em>Settings &gt; Ad privacy options</em>. Details: Google Play Data Safety, Google Privacy Policy.</p>
 
-    <h2>7. Saklama, Silme ve Kullanıcı Hakları</h2>
-    <p>FocusCut geliştiricisi fotoğraf ve taslaklarınıza sahip olmadığı için bunları sizin adınıza sunucudan silemez. Yerel taslakları uygulama içindeki proje silme seçeneğiyle veya Android ayarlarından uygulama verilerini temizleyerek silebilirsiniz. Dışa aktarılan görselleri galeri/dosya uygulamanızdan ayrıca silmeniz gerekir. KVKK/GDPR kapsamında işlenen verilere ilişkin bilgi alma veya silme taleplerinizi e-posta adresimiz üzerinden iletebilirsiniz.</p>
+        <h2>5. Permissions</h2>
+        <ul>
+            <li><strong>Internet and network state:</strong> Required for UMP and Google ad services to function properly.</li>
+            <li><strong>Photo selection:</strong> Managed via the Android system picker, strictly limited to the images you manually choose.</li>
+            <li><strong>Write to external storage (older Android versions):</strong> Required only on Android 9 and below to save the exported images to the public <em>Pictures</em> folder. This permission is not used to read your photos in bulk.</li>
+        </ul>
+        <p>FocusCut does not request access to your camera, microphone, precise location, contacts, SMS, call logs, or accounts.</p>
 
-    <h2>8. Çocukların Gizliliği</h2>
-    <p>FocusCut bilinçli olarak 13 yaş altındaki çocuklardan kişisel bilgi istemez ve çocuklara özel bir hizmet olarak tasarlanmamıştır. Google Play Console’daki hedef kitle seçimi uygulamanın gerçek kullanımına göre yapılmalıdır. Uygulama çocukları hedefleyecek şekilde değişirse Families politikası ve reklam ayarları yeniden değerlendirilmelidir.</p>
+        <h2>6. Sharing and third parties</h2>
+        <p>The FocusCut developer does not sell, rent, or store your photos on any external servers. The Google Mobile Ads SDK and UMP may transfer data to their respective services to facilitate advertising and consent management. This data transfer is governed by your ad privacy preferences and the terms of those Google services.</p>
+        <p>Actions such as opening a privacy policy link in your browser or sharing an exported file with another application are initiated by you and are subject to the privacy policies of those destination apps.</p>
 
-    <h2>9. Güvenlik</h2>
-    <p>Fotoğraf düzenleme işlemlerinin cihazda yapılması, fotoğraf içeriğinin geliştiriciye aktarılmamasını sağlar. Google hizmetleriyle yapılan ağ iletişimi ilgili sağlayıcının güvenlik ve şifreleme uygulamalarına tabidir. Hiçbir elektronik depolama veya aktarım yönteminin tamamen risksiz olduğu garanti edilemez.</p>
+        <h2>7. Retention and deletion</h2>
+        <p>Because the FocusCut developer does not collect or possess your photos and drafts, they cannot delete them from a server on your behalf. You can delete local drafts using the project delete option within the app or by clearing the app data in your Android settings. Exported images must be deleted manually from your gallery or file manager. The retention periods for data collected by Google ad services are determined by Google's respective privacy policies.</p>
 
-    <h2>10. Politika Değişiklikleri</h2>
-    <p>Uygulama özellikleri, kullanılan SDK’lar veya yasal gereklilikler değiştiğinde bu politika güncellenebilir. Güncel sürüm bu sayfada, güncelleme tarihiyle birlikte yayınlanır.</p>
+        <h2>8. Children's privacy</h2>
+        <p>FocusCut does not knowingly collect personal information from children and is not designed as a service specifically targeting children. The target audience selection in the Google Play Console reflects the app's general utility. If the app's target audience changes to include children, the Families policy and ad settings will be re-evaluated accordingly.</p>
 
-    <h2>11. İletişim</h2>
-    <p>Bu politika veya kişisel verilerle ilgili sorularınız için <strong>muhammetappsupport@gmail.com</strong> adresine yazabilirsiniz.</p>
+        <h2>9. Security</h2>
+        <p>All photo editing processes occur entirely on your device, ensuring that your photo content is never transferred to the developer. Network communications related to Google services are protected by the security and encryption practices of the provider. However, no electronic storage or network transfer method can be guaranteed to be 100% risk-free.</p>
+
+        <h2>10. Policy changes</h2>
+        <p>This privacy policy may be updated periodically to reflect changes in app features, integrated SDKs, or legal requirements. The most current version will always be published on this page, along with its effective update date.</p>
+
+        <h2>11. Contact</h2>
+        <p>If you have any questions or concerns regarding this policy or personal data, you can contact us at: <a href="mailto:muhammetappsupport@gmail.com">muhammetappsupport@gmail.com</a>.</p>
+    </div>
+
+</div>
+
+<script>
+    function switchLang(lang) {
+        // Buton stillerini güncelle
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // İçerikleri gizle/göster
+        document.getElementById('content-tr').classList.remove('active');
+        document.getElementById('content-en').classList.remove('active');
+        document.getElementById('content-' + lang).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
