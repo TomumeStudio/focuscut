@@ -51,7 +51,7 @@
             border-bottom: 2px solid #ecf0f1;
             padding-bottom: 10px;
             margin-bottom: 5px;
-            padding-right: 120px; /* Dil butonları için boşluk */
+            padding-right: 120px;
         }
         h2 {
             color: #34495e;
@@ -91,7 +91,6 @@
         .lang-content.active {
             display: block;
         }
-        
         @media (max-width: 600px) {
             .lang-switcher {
                 position: static;
@@ -107,8 +106,8 @@
 
 <div class="container">
     <div class="lang-switcher">
-        <button class="lang-btn active" onclick="switchLang('tr')">TR</button>
-        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn active" id="btn-tr" onclick="switchLang('tr')">TR</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
     </div>
 
     <!-- TÜRKÇE İÇERİK -->
@@ -140,7 +139,7 @@
         <h2>4. Reklamlar ve Google hizmetleri</h2>
         <p>FocusCut ana ekranda banner reklam gösterebilir. Ayrıca Full HD ve orijinal çözünürlük gibi yüksek dışa aktarma seçeneklerini isteğe bağlı olarak açmak için ödüllü reklam kullanır. Reklam izlemek zorunlu değildir; standart kalite seçeneği reklamsız kullanılabilir.</p>
         <p>Google Mobile Ads SDK, reklam hizmetlerini sağlamak ve ölçmek için cihazdan veri işleyebilir. Bu işleme, Google’ın kendi politikalarına ve hesabınızdaki reklam ayarlarına tabidir. FocusCut fotoğraf içeriğini reklam kişiselleştirmesi için Google’a göndermez.</p>
-        <p>Geçerli bölgelerde reklam onayı ve reklam gizliliği tercihleri Google UMP ekranıyla alınır. Bu tercihleri uygulamadaki <em>Ayarlar &gt; Reklam gizliliği seçenekleri</em> bölümünden değiştirebilirsiniz. Ayrıntılar: Google Play veri açıklaması, Google Gizlilik Politikası.</p>
+        <p>Geçerli bölgelerde reklam onayı ve reklam gizliliği tercihleri Google UMP ekranıyla alınır. Bu tercihleri uygulamadaki <em>Ayarlar &gt; Reklam gizliliği seçenekleri</em> bölümünden değiştirebilirsiniz. Ayrıntılar için <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a> ve Play Data Safety kurallarını inceleyebilirsiniz.</p>
 
         <h2>5. İzinler</h2>
         <ul>
@@ -199,7 +198,7 @@
         <h2>4. Ads and Google services</h2>
         <p>FocusCut may display banner ads on the home screen. It also utilizes rewarded ads to optionally unlock high-quality export options, such as Full HD and original resolution. Watching ads is not mandatory; standard quality exports are always available ad-free.</p>
         <p>The Google Mobile Ads SDK may process data from your device to provide and measure ad services. This processing is subject to Google's own policies and your Google account ad settings. FocusCut does not send your photo content to Google for ad personalization.</p>
-        <p>In applicable regions, ad consent and privacy preferences are managed via the Google UMP screen. You can change these preferences anytime within the app via <em>Settings &gt; Ad privacy options</em>. Details: Google Play Data Safety, Google Privacy Policy.</p>
+        <p>In applicable regions, ad consent and privacy preferences are managed via the Google UMP screen. You can change these preferences anytime within the app via <em>Settings &gt; Ad privacy options</em>. Details: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
         <h2>5. Permissions</h2>
         <ul>
@@ -222,22 +221,19 @@
         <h2>9. Security</h2>
         <p>All photo editing processes occur entirely on your device, ensuring that your photo content is never transferred to the developer. Network communications related to Google services are protected by the security and encryption practices of the provider. However, no electronic storage or network transfer method can be guaranteed to be 100% risk-free.</p>
 
-        <h2>10. Policy changes</h2>
+        <h2>10. Politika değişiklikleri / Policy changes</h2>
         <p>This privacy policy may be updated periodically to reflect changes in app features, integrated SDKs, or legal requirements. The most current version will always be published on this page, along with its effective update date.</p>
 
         <h2>11. Contact</h2>
         <p>If you have any questions or concerns regarding this policy or personal data, you can contact us at: <a href="mailto:muhammetappsupport@gmail.com">muhammetappsupport@gmail.com</a>.</p>
     </div>
-
 </div>
 
 <script>
     function switchLang(lang) {
-        // Buton stillerini güncelle
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
+        document.getElementById('btn-' + lang).classList.add('active');
 
-        // İçerikleri gizle/göster
         document.getElementById('content-tr').classList.remove('active');
         document.getElementById('content-en').classList.remove('active');
         document.getElementById('content-' + lang).classList.add('active');
